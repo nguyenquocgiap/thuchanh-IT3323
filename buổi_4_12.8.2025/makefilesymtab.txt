@@ -1,0 +1,19 @@
+CC = gcc
+CFLAGS = -c -Wall
+
+all: parser
+
+parser: main.o symtab.o debug.o
+	$(CC) main.o symtab.o debug.o -o parser
+
+main.o: main.c symtab.h debug.h
+	$(CC) $(CFLAGS) main.c
+
+symtab.o: symtab.c symtab.h
+	$(CC) $(CFLAGS) symtab.c
+
+debug.o: debug.c debug.h
+	$(CC) $(CFLAGS) debug.c
+
+clean:
+	rm -f *.o parser
