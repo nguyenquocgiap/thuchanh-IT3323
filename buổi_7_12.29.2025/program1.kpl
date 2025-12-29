@@ -1,0 +1,20 @@
+Program Program1;
+   Var a : Integer;
+   Var b : Integer;
+Begin
+   (* Nhap vao a va b *)
+   Call ReadI(a);
+   Call ReadI(b);
+
+   (* Tinh va in Tong *)
+   Call WriteI(a + b);
+   Call WriteLn;
+
+   (* Tinh va in Hieu *)
+   Call WriteI(a - b);
+   Call WriteLn;
+
+   (* Tinh va in Tich *)
+   Call WriteI(a * b);
+   Call WriteLn;
+End.

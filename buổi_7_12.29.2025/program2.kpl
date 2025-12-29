@@ -1,0 +1,26 @@
+Program Program2;
+   Var n : Integer;
+   Var sum : Integer;
+   Var remainder : Integer;
+Begin
+   (* Nhap n *)
+   Call ReadI(n);
+   sum := 0;
+
+   (* Vong lap tach so *)
+   While n > 0 Do
+   Begin
+      (* Lay chu so cuoi cung: n % 10 *)
+      (* KPL co the khong co dau %, nen ta dung cong thuc: n - (n/10)*10 *)
+      remainder := n - (n / 10) * 10;
+      
+      sum := sum + remainder;
+      
+      (* Bo chu so cuoi cung *)
+      n := n / 10;
+   End;
+
+   (* In ket qua *)
+   Call WriteI(sum);
+   Call WriteLn;
+End.
